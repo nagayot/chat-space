@@ -58,18 +58,18 @@
       display: flex;
       padding: 46px 40px 12px 40px;
 
-      .list__name {
+      &__name {
         color: #333333;
         font-size: 16px;
         font-weight: bold;
       }
-      .list__time {
+      &__time {
         color: #999999;
         font-size: 12px;
         margin-left: 10px;
         }
     }
-    .list__message {
+    &__message {
       color: #434A54;
       font-size: 14px;
       padding-left: 40px;
