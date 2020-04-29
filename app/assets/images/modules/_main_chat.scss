@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.main__chat {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+
+  .main__group {
+    background-color: #ffffff;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+
+    &__name {
+      color: #333333;
+      font-size: 20px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+    &__member {
+      font-size: 12px;
+      color: #999999;
+      display: flex;
+      position: absolute;
+      bottom: 0;
+      }
+    &__editbtn {
+      color: #38aef0;
+      font-size: 16px;
+      height: 40px;
+      border: 1px solid #38aef0;
+      padding: 0 20px;
+      margin-top: 30px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+
+
+
+  .messages {
+    background-color: #fafafa;
+    height: calc(100% - 100px - 90px);
+
+    &__info {
+      display: flex;
+      padding: 46px 40px 12px 40px;
+
+      &__name {
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__time {
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;
+        }
+    }
+    &__message {
+      color: #434A54;
+      font-size: 14px;
+      padding-left: 40px;
+    }
+  }
+
+
+
+  .main__form {
+      background-color: #d2d2d2;
+      height: 90px;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+
+    &__text {
+      height: 50px;
+      width: 100%;
+      color: #ffffff;
+      display: block;
+      position: relative;
+
+      &__input {
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+        border-style: none;
+        }
+      &__image {
+        position: absolute;
+        font-size: 1.3rem;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: black;
+      }
+        &__file {
+          display: none;
+        }
+
+      a {
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+      
+    &__sendbtn {
+      width: 100px;
+      height: 50px;
+      margin-left: 15px;
+
+      &__input{
+        background-color: rgb(0, 204, 255);
+        color: white;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        cursor: pointer;
+        border-width: 1px;
+        border-style: solid ;
+        border-color: rgb(216,216,216);
+      }
+    }
+  }
+}

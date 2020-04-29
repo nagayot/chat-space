@@ -1,0 +1,25 @@
+.wrapper
+  .side-bar
+    .header
+      %ul.header__items
+        %li.header__items__name
+        ユーザーネーム
+        %li.header__items__icons
+          = link_to "#", class: "header__items__icons__edit" do
+            = icon('far', 'fa-edit')
+            %i.far.fa-edit
+          = link_to "#", class:"header__items__icons__cog" do
+            = icon('fas', 'fa-cog')
+            %i.fas.fa-cog
+
+    .groups
+      .groups__list
+        %p.groups__list__name
+          グループ名
+        %p.groups__list__message
+          メッセージ
+      .groups__list
+        %p.groups__list__name
+          グループ名
+        %p.groups__list__message
+          メッセージ

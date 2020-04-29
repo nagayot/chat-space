@@ -1,0 +1,35 @@
+.wrapper
+  .main__chat
+    .main__group
+      .main__group__name
+        test
+      .main__group__member
+        Member:メンバー名
+      .main__group__editbtn
+        Edit
+
+    .messages
+      .messages__info
+        %p.messages__info__name
+          name1
+        %p.messages__info__time
+          2020/04/27(Mon) 17:00:00
+      .messages__message
+        message1
+      .messages__info
+        %p.messages__info__name
+          name2
+        %p.messages__info__time
+          2020/04/27(Mon) 18:00:00
+      .messages__message
+        message2
+
+    .main__form
+      .main__form__text
+        %input{class: "main__form__text__input", placeholder: "type a message ", type: "text"}/
+        %label{class: "main__form__text__image"}
+          = icon('far', 'fa-image')
+          %input{class:"main__form__text__file", type: "file"}
+          %i.far.fa-image
+      .main__form__sendbtn
+        %input{class: "main__form__sendbtn__input", type: "send", name: "commit", value: "Send"}/
