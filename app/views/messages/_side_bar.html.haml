@@ -1,25 +1,20 @@
 .wrapper
   .side-bar
     .header
-      %ul.header__items
-        %li.header__items__name
+      .items
+        .items__name
           = current_user.name
-        %li.header__items__icons
-          = link_to "#", class: "header__items__icons__edit" do
-            = icon('far', 'fa-edit')
-            %i.far.fa-edit
+        .items__icons
+          = link_to new_group_path do
+            %i.fa.fa-edit.items__icons__edit
           = link_to edit_user_path(current_user) do
-            = icon('fas', 'fa-cog', class:"header__items__icons__cog")
-            %i.fas.fa-cog
+            %i.fa.fa-cog.items__icons__cog
 
     .groups
-      .groups__list
-        %p.groups__list__name
-          グループ名
-        %p.groups__list__message
-          メッセージ
-      .groups__list
-        %p.groups__list__name
-          グループ名
-        %p.groups__list__message
-          メッセージ
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            .group__name
+              = group.name
+            .group__message
+              メッセージはまだありません。
