@@ -1,35 +1,26 @@
 .wrapper
   .main__chat
+
     .main__group
       .main__group__name
-        test
+        = @group.name
       .main__group__member
-        Member:メンバー名
+        Member:
+        - @group.users.each do |user|
+          = user.name
       .main__group__editbtn
-        Edit
+        = link_to edit_group_path(@group) do
+          Edit
 
-    .messages
-      .messages__info
-        %p.messages__info__name
-          name1
-        %p.messages__info__time
-          2020/04/27(Mon) 17:00:00
-      .messages__message
-        message1
-      .messages__info
-        %p.messages__info__name
-          name2
-        %p.messages__info__time
-          2020/04/27(Mon) 18:00:00
-      .messages__message
-        message2
+    .message
+      = render @messages
 
     .main__form
-      .main__form__text
-        %input{class: "main__form__text__input", placeholder: "type a message ", type: "text"}/
-        %label{class: "main__form__text__image"}
-          = icon('far', 'fa-image')
-          %input{class:"main__form__text__file", type: "file"}
-          %i.far.fa-image
-      .main__form__sendbtn
-        %input{class: "main__form__sendbtn__input", type: "send", name: "commit", value: "Send"}/
+      = form_for [@group, @message] do |f|
+        .main__form__oya
+          = f.text_field :content, class: 'main__form__oya__input', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'image' do
+              = icon('fas', 'image', class: 'icon')
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'main__form__oya__submit'
