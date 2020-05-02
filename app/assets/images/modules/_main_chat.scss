@@ -33,7 +33,6 @@
       bottom: 0;
       }
     &__editbtn {
-      color: #38aef0;
       font-size: 16px;
       height: 40px;
       border: 1px solid #38aef0;
@@ -45,34 +44,45 @@
     a {
       display: inline-block;
       text-decoration: none;
+      color: #38aef0;
     }
   }
 
 
 
-  .messages {
+  .message {
     background-color: #fafafa;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    overflow: scroll;
 
     &__info {
       display: flex;
-      padding: 46px 40px 12px 40px;
+      margin-bottom: 10px;
 
       &__name {
         color: #333333;
         font-size: 16px;
         font-weight: bold;
       }
-      &__time {
+      &__date {
         color: #999999;
         font-size: 12px;
         margin-left: 10px;
         }
     }
-    &__message {
+    &__text {
       color: #434A54;
       font-size: 14px;
-      padding-left: 40px;
+      margin-bottom: 10px;
+      padding-bottom: 40px;
+
+      &__content {
+
+      }
+      &__image {
+
+      }
     }
   }
 
@@ -82,15 +92,11 @@
       background-color: #d2d2d2;
       height: 90px;
       padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
 
-    &__text {
-      height: 50px;
+    &__oya {
       width: 100%;
-      color: #ffffff;
-      display: block;
       position: relative;
+      display: flex;
 
       &__input {
         height: 50px;
@@ -98,39 +104,32 @@
         padding: 0 40px 0 10px;
         border-style: none;
         }
-      &__image {
+      .form__mask {
         position: absolute;
         font-size: 1.3rem;
         top: 10px;
-        right: 10px;
+        right: 130px;
         cursor: pointer;
         color: black;
-      }
-        &__file {
-          display: none;
+        .image {
+          .hidden {
+            display: none;
+          }
         }
-
-      a {
-        display: inline-block;
-        text-decoration: none;
       }
-    }
-      
-    &__sendbtn {
-      width: 100px;
-      height: 50px;
-      margin-left: 15px;
-
-      &__input{
-        background-color: rgb(0, 204, 255);
-        color: white;
+      &__submit {
         width: 100px;
         height: 50px;
-        text-align: center;
-        cursor: pointer;
-        border-width: 1px;
-        border-style: solid ;
-        border-color: rgb(216,216,216);
+        margin-left: 15px;
+        background-color: rgb(0, 204, 255);
+          color: white;
+          width: 100px;
+          height: 50px;
+          text-align: center;
+          cursor: pointer;
+          border-width: 1px;
+          border-style: solid ;
+          border-color: rgb(216,216,216);
       }
     }
   }
