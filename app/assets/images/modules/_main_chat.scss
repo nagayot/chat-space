@@ -50,38 +50,37 @@
 
 
 
-  .message {
+  .messages {
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding: 46px 40px;
     overflow: scroll;
 
-    &__info {
-      display: flex;
-      margin-bottom: 10px;
-
-      &__name {
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-      }
-      &__date {
-        color: #999999;
-        font-size: 12px;
-        margin-left: 10px;
-        }
-    }
-    &__text {
-      color: #434A54;
-      font-size: 14px;
-      margin-bottom: 10px;
+    .message{
       padding-bottom: 40px;
-
-      &__content {
-
+      &__info {
+        display: flex;
+        margin-bottom: 10px;
+        &__name {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
       }
-      &__image {
+      &__text {
+          color: #434A54;
+          font-size: 14px;
+          margin-bottom: 10px;
 
+          &__content {
+          }
+          &__image {
+          }
       }
     }
   }
